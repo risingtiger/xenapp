@@ -1,0 +1,7 @@
+**/node_modules
+**/.vscode/
+appengine/build/
+appengine/dist/
+
+
+**/.DS_Store
