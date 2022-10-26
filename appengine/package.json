@@ -1,0 +1,11 @@
+{
+  "name": "xenapp appengine",
+  "description": "Xenapp Appengine",
+  "version": "0.1.0",
+  "private": true,
+  "license": "Apache Version 2.0",
+  "author": "Davis Hammon",
+  "dependencies": {
+  },
+  "devDependencies": {}
+}

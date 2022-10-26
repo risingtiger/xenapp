@@ -1,0 +1,141 @@
+
+
+v-transactions 
+{
+    & #transactions.list
+    {
+	& h6
+	{
+	    font-size: 15px;
+	}
+
+	& p
+	{
+	    font-size: 14px;
+	    color: var(--textcolor-fade);
+	}
+
+	& li > div
+	{
+	    box-sizing: border-box;
+	}
+
+	& li > div:nth-child(1)
+	{
+	    width: 6%;
+	    padding-left: 12px;
+	    box-sizing: border-box;
+	}
+	& li > div:nth-child(2)
+	{
+	    width: 34%;
+
+	    & p
+	    {
+		color: #f87c31;
+	    }
+	}
+	& li > div:nth-child(3)
+	{
+	    width: 20%;
+	}
+	& li > div:nth-child(4)
+	{
+	    width: 20%
+	}
+	& li > div:nth-child(4)
+	{
+	    width: 20%
+	}
+    }
+}
+
+
+
+
+  v-transactions ion-item:nth-child(1) ion-label {
+    margin-top: 8;
+  }
+
+v-transactions ion-avatar {
+  width: 27px;
+  height: 27px;
+}
+v-transactions h3 + p {
+  padding-left: 10px;
+}
+
+v-transactions .isoffline_text {
+  color: red;
+}
+
+@media only screen
+and (min-device-width: 768px) {
+  v-transactions h3 {
+    padding-left: 10px;
+    display: flex;
+  }
+    v-transactions h3 span {
+      /*font-size: 14px;*/
+    }
+    v-transactions h3 span.firstcolumn {
+      width: 29%;
+    }
+    v-transactions h3 span.secondcolumn, v-transactions h2 span.thirdcolumn, v-transactions h2 span.fourthcolumn {
+      color:gray;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    v-transactions h3 span.secondcolumn {
+      width: 20%;
+    }
+    v-transactions h3 span.thirdcolumn {
+      width: 20%;
+    }
+    v-transactions h3 span.fourthcolumn {
+      width: 20%;
+    }
+
+  v-transactions h3 + p {
+    display: flex;
+  }
+    v-transactions h3 + p span {
+      /*font-size: 14px;*/
+    }
+    v-transactions h3 + p span.firstcolumn {
+      width: 29%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    v-transactions h3 + p span.secondcolumn, v-transactions h2 + p span.thirdcolumn, v-transactions h2 + p span.fourthcolumn {
+      color:gray;
+      /*padding-left: 21px;*/
+    }
+    v-transactions h3 + p span.secondcolumn {
+      width: 20%;
+    }
+    v-transactions h3 + p span.thirdcolumn {
+      width: 20%;
+    }
+    v-transactions h3 + p span.fourthcolumn {
+      width: 20%;
+    }
+
+}
+
+@media only screen and (max-device-width: 767px) {
+  v-transactions ion-avatar {
+    margin-right: 10px;
+  }
+  v-transactions h3 + p {
+    padding-left: 0;
+  }
+  v-transactions span.xtra {
+    display:none;
+  }
+}
+
+
+
