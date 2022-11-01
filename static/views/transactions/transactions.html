@@ -8,13 +8,74 @@
 
 
 <div class="content">
-  <ul id="transactions" class="list">
 
-    ${_transactions.map(t => Lit_Html`
-	  <li>
-      as
-    </li>
-    `)}
+  <div id="keyctrl">
+    <span>&nbsp; &nbsp; ${_s.keyaction === 'd' ? 'DATE -- ' : ''}</span>
+    <span>&nbsp; &nbsp; ${_s.keyaction === 'f' ? 'FILTER -- ' : ''}</span>
+    <span>${_s.keyaction2 === 'm' ? 'MERCHANT: ' : ''}</span>
+    <span>${_s.keyaction2 === 'a' ? 'Area: ' : ''}</span>
+    <span>${_s.keyaction2 === 'c' ? 'Cat: ' : ''}</span>
+    <span>${_s.keyaction2 === 't' ? 'Tags: ' : ''}</span>
+    <span>${_s.keyaction2 === 'n' ? 'Note: ' : ''}</span>
+    <span>${_s.keysearchstr}</span>
+  </div>
 
-  </ul>
+
+  <table id="bcalcs">
+
+    <thead>
+      <tr>
+        ${_bcalcsH.map(bcH => Lit_Html`
+        <th>${bcH}</th>
+        `)}
+      </tr>
+    </thead>
+
+    <tbody>
+      ${_bcalcs.map(bc => Lit_Html`
+      <tr>
+        <td>${bc.catdisplay}</td>
+
+        ${bc.amounts.map(amount => Lit_Html`
+        <td>${amount}</td>
+        `)}
+      </tr>
+      `)}
+    </tbody>
+
+  </table>
+
+
+
+  <table id="transactions">
+
+    <!-- <thead> -->
+    <!--   <tr> -->
+    <!--     <th></th> -->
+    <!--   </tr> -->
+    <!-- </thead> -->
+
+    <tbody>
+      ${_filteredt.map(t => Lit_Html`
+      <tr>
+        <td>${t.y}-${t.m}-${t.d}</td>
+        <td>${t.merchant}</td>
+        <td>${t.cat.parent.name}-${t.cat.name}</td>
+        <td>
+          ${t.tags.map(tag=> Lit_Html`<span>${tag.name},</span>`)}
+        </td>
+        <td>${t.source.name}</td>
+        <td>${t.amount}</td>
+        <td>${t.notes}</td>
+      </tr>
+      `)}
+    </tbody>
+
+  </table>
+
+
+
 </div>
+
+
+

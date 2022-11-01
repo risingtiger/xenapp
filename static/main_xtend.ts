@@ -4,6 +4,14 @@
 
 (window as any).__APPINSTANCE = {
   firebase: {
-    project: 'xen'
+    project: 'xenition'
   }
-}
+};
+
+
+
+
+(window as any).__APPINSTANCE_ROUTES = [
+  ["^index$", "index"],
+  ["^transactions", "transactions"]
+]
